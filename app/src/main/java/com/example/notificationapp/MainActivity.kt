@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
             notification.setContentTitle(binding.titleET.text.toString())
             notification.setContentTitle(binding.contentET.text.toString())
             notification.setSmallIcon(R.drawable.high)
+                notification.setPriority(NotificationCompat.PRIORITY_HIGH)
                 .build()
 
             val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
@@ -32,7 +33,8 @@ class MainActivity : AppCompatActivity() {
             val notification = NotificationCompat.Builder(this,App().CHANNEL_ID2)
             notification.setContentTitle(binding.titleET.text.toString())
             notification.setContentTitle(binding.contentET.text.toString())
-            notification.setSmallIcon(R.drawable.high)
+            notification.setSmallIcon(R.drawable.low)
+            notification.setPriority(NotificationCompat.PRIORITY_LOW)
                 .build()
 
             val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
